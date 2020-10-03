@@ -1,0 +1,90 @@
+.title {
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+.title h1 {
+    font-size: 6vmax;
+    text-align: center;
+    width: 100vw;
+}
+
+@keyframes jump {
+    0% {
+        transform: scaleY(1) translate(0px, 0px);
+    }
+
+    10% {
+        transform: scaleY(1);
+    }
+
+    30% {
+        transform: scaleY(0.7) translate(0px, 5px);
+    }
+
+    70% {
+        transform: scaleY(1.1) translate(0px, -15px);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.letter {
+    font-family: 'Shadows Into Light', cursive;
+    display: inline-block;
+    white-space: pre;
+    line-height: 10px;
+}
+
+.title h1:hover .letter:hover {
+    animation: jump 0.7s ease-in-out forwards;
+    color: pink;
+}
+
+.icons {
+    position: absolute;
+    left: 50%;
+    top: 8vmax;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(-50%, 0);
+}
+
+.icons img {
+    height: 4rem;
+}
+
+.icons a{
+    margin: 0 5px;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.icons a:hover{
+    transform: scale(1.2);
+}
+
+.icons path {
+    stroke: #ffffff;
+    fill: url(#hachure);
+}
+
+@media only screen and (max-width: 1024px) {
+    .title h1 {
+        font-size: 9vmax;
+    }
+
+    .icons {
+        top: 12vmax;
+    }
+
+    .icons img {
+        height: 3rem;
+    }
+}
