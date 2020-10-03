@@ -14,3 +14,10 @@ footer{
   right: 0;
   margin: 1rem;
 }
+
+.particles{
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Particles from 'react-particles-js';
 import style from './index.module.css';
 import Layout from '../components/layout';
 import jashiReno from '../images/jashiReno.gif';
