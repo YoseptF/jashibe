@@ -5,7 +5,7 @@ module.exports = {
     author: '@Yosept',
   },
   plugins: [
-    'gatsby-transformer-typescript-css-modules',
+    // 'gatsby-transformer-typescript-css-modules',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
