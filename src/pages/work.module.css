@@ -9,10 +9,7 @@
     ". . . . . ."
     ". . . . . ."
     ". . c c . ."
-    ". . c c g ."
-    ". . . . . ."
-    ". . . . . ."
-    ". . . . . .";
+    ". . c c g .";
   }
   
   @media only screen and (orientation:portrait){
@@ -78,6 +75,15 @@ grid-area: c;
 width: 100%;
 transform: scale(1.1);
 z-index: -1;
+position: relative;
+}
+
+.margin img{
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,0);
 }
 
 .gasm {

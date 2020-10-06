@@ -3,7 +3,6 @@ import Back from '../components/Back';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import style from './commisions.module.css';
 
 const Animation = () => (
   <Layout>

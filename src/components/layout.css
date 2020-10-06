@@ -47,3 +47,7 @@ footer{
   cursor: pointer;
   background: #2e5181;
 }
+
+.tl-edges > div {
+  overflow: hidden;
+}
