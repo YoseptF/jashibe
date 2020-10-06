@@ -8,6 +8,10 @@
   color: black;
 }
 
+body{
+  overflow: hidden;
+}
+
 footer{
   position: absolute;
   bottom: 0;
@@ -15,9 +19,31 @@ footer{
   margin: 1rem;
 }
 
+
 .particles{
   overflow: hidden;
   position: absolute;
   width: 100vw;
   height: 100vh;
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c74ac;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #2e5181;
 }

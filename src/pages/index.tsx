@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Particles from 'react-particles-js';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import style from './index.module.css';
 import Layout from '../components/layout';
 import jashiReno from '../images/jashiReno.gif';
 import SEO from '../components/seo';
 import money from '../images/icons/money.svg';
 import faq from '../images/icons/question.svg';
-import animation from '../images/icons/running.svg';
+import animation from '../images/icons/film.svg';
 import work from '../images/icons/brush.svg';
 
 const IndexPage = () => (
@@ -22,18 +22,30 @@ const IndexPage = () => (
         }}
       />
       <section className={style.info}>
-        <Link to="/prices">
-          <img src={money} alt="prices" />
-        </Link>
-        <Link to="/work">
+        <AniLink to="/commissions" paintDrip hex="#fff">
+          <img src={money} alt="commissions" />
+        </AniLink>
+        <AniLink
+          paintDrip
+          hex="#fff"
+          to="/work"
+        >
           <img src={work} alt="work" />
-        </Link>
-        <Link to="/animation">
+        </AniLink>
+        <AniLink
+          paintDrip
+          hex="#fff"
+          to="/animation"
+        >
           <img src={animation} alt="animation" />
-        </Link>
-        <Link to="/faq">
+        </AniLink>
+        <AniLink
+          paintDrip
+          hex="#fff"
+          to="/faq"
+        >
           <img src={faq} alt="faq" />
-        </Link>
+        </AniLink>
       </section>
     </main>
   </Layout>

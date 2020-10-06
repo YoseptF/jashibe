@@ -68,6 +68,7 @@
 
 .icons a:hover{
     transform: scale(1.2);
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .icons path {

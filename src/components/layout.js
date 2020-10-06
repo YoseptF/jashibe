@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import Particles from 'react-particles-js';
 import Header from './header';
 import './layout.css';
-import Particles from 'react-particles-js';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,6 +20,8 @@ const Layout = ({ children }) => {
     <>
       <div className="particles">
         <Particles
+          width="100vw"
+          height="100vh"
           params={{
             particles: {
               number: {

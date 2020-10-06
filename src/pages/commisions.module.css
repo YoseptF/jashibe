@@ -1,0 +1,106 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(7, calc(100vw / 7));
+    grid-template-rows: calc(100vh / 7) calc(100vh / 7) 16.5vmax 16.5vmax;
+    grid-auto-rows: calc(100vh / 7);
+    grid-template-areas:
+    ". . . . . ."
+    ". . . . . ."
+    ". . c c . ."
+    ". . c c g ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . .";
+  }
+  
+  @media only screen and (orientation:portrait){
+    .main{
+    grid-template-rows: calc(100vh / 7) calc(100vh / 7) 11vmax 11vmax 11vmax;
+    grid-template-areas:
+    ". . . . . . ."
+    ". . . . . . ."
+    ". c c c c . ."
+    ". c c c c . ."
+    ". c c c c g ."
+    ". . . . . . ."
+    ". . . . . . .";
+  }
+}
+
+.base {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: #6e98d4;
+    z-index: -2;
+}
+
+.carousel:hover::-webkit-scrollbar {
+    height: 15px;
+}
+
+.carousel {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  
+.carousel > div {
+  cursor: pointer;
+  height: 16vmax;
+  width: 16vmax;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel > div img {
+  height: 120%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.carousel > div:hover {
+    transform: scale(0.9);
+}
+
+.margin{
+grid-area: c;
+width: 100%;
+transform: scale(1.1);
+z-index: -1;
+}
+
+.gasm {
+  grid-area: g;
+  transform: rotate3d(0, 1, 0, 180deg) translate(0,-7vmax);
+  height: 30vmax;
+}
+  
+@media only screen and (max-width:870px){
+  .carousel {
+    grid-template-rows: repeat(2, 25vmax);
+  }
+  .carousel img{
+    height: 25vmax;
+  }
+}
+/* @media only screen and (max-width:1400px){
+  .carousel {
+    grid-template-rows: repeat(2, 19vmax);
+    max-width: 65vw
+  }
+  .carousel img{
+    height: 19vmax;
+  }
+} */
+

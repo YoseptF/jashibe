@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Laura Rosas',
+    title: "Laura's Portfolio",
     description: "Laura's Personal Protfolio.",
     author: '@Yosept',
+    commissionsFolder: 'MWMGQ23',
   },
   plugins: [
     // 'gatsby-transformer-typescript-css-modules',
+    'gatsby-plugin-transition-link',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
