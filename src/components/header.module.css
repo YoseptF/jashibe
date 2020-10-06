@@ -19,7 +19,7 @@
     }
 
     10% {
-        transform: scaleY(1);
+        transform: scaleY(1) translate(0px, 0px);
     }
 
     30% {
@@ -31,7 +31,7 @@
     }
 
     100% {
-        transform: scaleY(1);
+        transform: scaleY(1) translate(0px, 0px);
     }
 }
 

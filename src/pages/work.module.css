@@ -8,22 +8,45 @@
     grid-template-areas:
     ". . . . . ."
     ". . . . . ."
-    ". . c c . ."
+    ". . c c h ."
     ". . c c g .";
   }
   
-  @media only screen and (orientation:portrait){
-    .main{
-    grid-template-rows: calc(100vh / 7) calc(100vh / 7) 11vmax 11vmax 11vmax;
-    grid-template-areas:
-    ". . . . . . ."
-    ". . . . . . ."
-    ". c c c c . ."
-    ". c c c c . ."
-    ". c c c c g ."
-    ". . . . . . ."
-    ". . . . . . .";
-  }
+
+
+.hand{
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  transform: rotate(-10deg) translate(5vw, 0);
+}
+
+.hand span {
+  display: inline-block;
+  font-family: 'Shadows Into Light';
+  font-size: 4vw;
+  line-height: 4vw;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hand img {
+  height: 5vmax;
+}
+
+@media only screen and (orientation:portrait){
+  .main{
+  grid-template-rows: calc(100vh / 7) calc(100vh / 7) 12vmax 12vmax 12vmax;
+  grid-template-areas:
+  ". . . . . . ."
+  ". . . . . . ."
+  ". c c c c h ."
+  ". c c c c . ."
+  ". c c c c g ."
+  ". . . . . . ."
+  ". . . . . . .";
+}
 }
 
 .base {
@@ -86,9 +109,25 @@ position: relative;
   transform: translate(-50%,0);
 }
 
+@keyframes up {
+  0%{
+    transform: rotate3d(0, 1, 0, 180deg) translate(0,30vmax) scaleY(0.9);
+  }
+  70%{
+    transform: rotate3d(0, 1, 0, 180deg) translate(0,-9vmax) scaleY(1.05);
+  }
+  90%{
+    transform: rotate3d(0, 1, 0, 180deg) translate(0,-6vmax) scaleY(0.97);
+  }
+  100%{
+    transform: rotate3d(0, 1, 0, 180deg) translate(0,-7vmax) scaleY(1);
+  }
+}
+
 .gasm {
   grid-area: g;
-  transform: rotate3d(0, 1, 0, 180deg) translate(0,-7vmax);
+  transform: rotate3d(0, 1, 0, 180deg) translate(0,25vmax) scaleY(0.9);
+  animation: up 700ms ease-in-out 1500ms forwards;
   height: 30vmax;
 }
   
