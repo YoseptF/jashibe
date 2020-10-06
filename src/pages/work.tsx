@@ -26,11 +26,16 @@ const Work = () => {
   useEffect(() => {
     const { commissionsFolder } = data.site.siteMetadata;
 
-    fetch(`https://api.imgur.com/3/album/${commissionsFolder}/images`, {
-      headers: {
-        Authorization: 'Client-ID a732583aa50be8a',
-      },
-    })
+    const myHeaders = new Headers();
+    myHeaders.append('Authorization', 'Client-ID a732583aa50be8a');
+
+    const requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow' as RequestRedirect, // eslint-disable-line no-undef
+    };
+
+    fetch(`https://api.imgur.com/3/album/${commissionsFolder}/images`, requestOptions)
       .then((response) => response.json())
       .then((json) => setImages(json.data));
   }, []);
